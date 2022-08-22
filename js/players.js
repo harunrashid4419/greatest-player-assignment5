@@ -1,13 +1,13 @@
 
 // click button and the button are disabled
-function disableButton(elementId){
+function disableButton(elementId) {
     var disabledButton = document.getElementById(elementId);
     disabledButton.disabled = true;
     disabledButton.style.backgroundColor = 'gray';
 };
 
 // click select button and player name show right side
-function getTextElementById(elementId){
+function getTextElementById(elementId) {
     const textFieldElement = document.getElementById(elementId);
     const textField = textFieldElement.innerText;
 
@@ -18,7 +18,7 @@ function getTextElementById(elementId){
     unorderList.append(li);
 };
 
-function getInputFieldById(elementId){
+function getInputFieldById(elementId) {
     const inputField = document.getElementById(elementId);
     const previousInputFieldString = inputField.value;
     const previousInputField = parseFloat(previousInputFieldString);
@@ -26,44 +26,44 @@ function getInputFieldById(elementId){
     return previousInputField;
 };
 
-function setElementValueById(elementId, value){
+function setElementValueById(elementId, value) {
     const textField = document.getElementById(elementId);
     textField.innerText = value;
 };
 
 
 
-document.getElementById('first-btn').addEventListener('click', function(){
+document.getElementById('first-btn').addEventListener('click', function () {
     getTextElementById('messi');
     disableButton('first-btn');
 });
 
-document.getElementById('second-btn').addEventListener('click', function(){
+document.getElementById('second-btn').addEventListener('click', function () {
     getTextElementById('maradona');
     disableButton('second-btn');
 });
 
-document.getElementById('third-btn').addEventListener('click', function(){
+document.getElementById('third-btn').addEventListener('click', function () {
     getTextElementById('pele');
     disableButton('third-btn');
 });
 
-document.getElementById('forth-btn').addEventListener('click', function(){
+document.getElementById('forth-btn').addEventListener('click', function () {
     getTextElementById('ronaldo');
     disableButton('forth-btn');
 });
 
-document.getElementById('fifth-btn').addEventListener('click', function(){
+document.getElementById('fifth-btn').addEventListener('click', function () {
     getTextElementById('neymer');
     disableButton('fifth-btn');
 });
 
-document.getElementById('sixth-btn').addEventListener('click', function(){
+document.getElementById('sixth-btn').addEventListener('click', function () {
     getTextElementById('ronaldinho');
     disableButton('sixth-btn');
 });
 
-document.getElementById('total-calculate-btn').addEventListener('click', function(){
+document.getElementById('total-calculate-btn').addEventListener('click', function () {
     const totalPlayerCost = document.getElementById('toal-player-cost');
     const previousTotalPlayerCostString = totalPlayerCost.innerText;
     const previousTotalPlayerCost = parseFloat(previousTotalPlayerCostString);
@@ -76,18 +76,17 @@ document.getElementById('total-calculate-btn').addEventListener('click', functio
     setElementValueById('total-cost-field', overallTotalCost);
 });
 
-document.getElementById('calculated').addEventListener('click', function(){
+document.getElementById('calculated').addEventListener('click', function () {
     const previousUnorderList = document.getElementById('unorder-list');
-    const playerLength = previousUnorderList.childNodes.length-1;
-    
+    const playerLength = previousUnorderList.childNodes.length - 1;
+
     const perPlayerAmount = getInputFieldById('per-player-amount');
     const newTotalAmount = perPlayerAmount * playerLength;
 
     setElementValueById('toal-player-cost', newTotalAmount);
 })
-
-
-
+const previousUnorderList = document.getElementById('unorder-list');
+console.log(previousUnorderList.childNodes.length);
 
 
 
