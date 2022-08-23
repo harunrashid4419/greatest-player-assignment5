@@ -13,11 +13,9 @@ function getTextElementById(elementId) {
     const textFieldElement = document.getElementById(elementId);
     const textField = textFieldElement.innerText;
 
-    const unorderList = document.getElementById('unorder-list');
-
     const li = document.createElement('li');
     li.innerText = textField;
-    unorderList.append(li);
+    previousUnorderList.append(li);
 };
 
 
