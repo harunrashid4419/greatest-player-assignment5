@@ -4,6 +4,7 @@ function getTextElementById(elementId) {
     const previousUnorderList = document.getElementById('unorder-list');
     const playerLength = previousUnorderList.childNodes.length - 1;
 
+    // alert 
     if(playerLength === 5){
         alert('Error: You cannot add any more names to the list');
         return;
@@ -20,7 +21,7 @@ function getTextElementById(elementId) {
 };
 
 
-// click button and the button are disabled
+// click the button and the button are disabled
 function disableButton(elementId) {
     var disabledButton = document.getElementById(elementId);
     disabledButton.disabled = true;
